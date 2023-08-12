@@ -26,7 +26,7 @@ const BlogPage = ({ data }) => (
   <div className={styles.main}>
     <br></br>
     {/* <Navigation /> */}
-    <h1 className={styles.name}>A Taste Of Tech</h1>
+    <h1 className={styles.name}>A Blog About Things</h1>
     <p className={styles.homeLinkText}><Link to="https://michaelgathara.com" className={styles.homeLink}>Michael Gathara's</Link> blog</p>
     <div className={styles.blogs}>
       {data.allMarkdownRemark.edges.map(post => (

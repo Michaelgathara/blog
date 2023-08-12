@@ -103,9 +103,9 @@ hr {
 }
 
 .blogPostContent {
-    margin-left: 5%;
+    margin-left: 10%;
     color: var(--text);
-    margin-right: 5%;
+    margin-right: 10%;
 }
 
 .blogPostContent h2, h3, h4 {
@@ -123,4 +123,14 @@ hr {
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
     background-color: black;
     border-radius: 10px;
+}
+
+img[alt="copy-symbol"] {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.blogPostContent img[alt="export-symbol"] {
+    text-align: center;
 }
