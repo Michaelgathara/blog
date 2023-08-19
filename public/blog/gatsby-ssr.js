@@ -1,14 +1,12 @@
-// gatsby-ssr.js
-import React from "react";
-import HTML from "./src/html";
+/**
+ * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/
+ */
 
-export const onRenderBody = ({ setHeadComponents, setHtmlAttributes, setBodyAttributes }, pluginOptions) => {
-  // Extract title and description from the page context, if available
-  const { title, desc } = pluginOptions;
-
-  setHtmlAttributes({ lang: "en" });
-  setBodyAttributes({});
-  setHeadComponents([
-    <HTML key="html-component" title={title} desc={desc} />
-  ]);
-};
+/**
+ * @type {import('gatsby').GatsbySSR['onRenderBody']}
+ */
+exports.onRenderBody = ({ setHtmlAttributes }) => {
+  setHtmlAttributes({ lang: `en` })
+}

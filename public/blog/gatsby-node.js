@@ -16,7 +16,6 @@ exports.createPages = async ({ graphql, actions }) => {
               date(formatString: "MMMM DD, YYYY")
               path
               title
-              desc
             }
             html
           }
@@ -32,12 +31,9 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allMarkdownRemark.edges.forEach((edge) => {
     createPage({
       path: edge.node.frontmatter.path,
-      title: edge.node.frontmatter.title,
-      desc: edge.node.frontmatter.desc,
       component: blogPostTemplate,
       context: {
         slug: edge.node.frontmatter.path, // Use 'slug' or another non-reserved name here
-        
       },
     });
   });
