@@ -2,6 +2,7 @@
 title: "Embracing Functional Programming in Python"
 date: "2023-07-23"
 path: "/functional_python"
+desc: "Python is a multi-paradigm programming language, which proves to be a great place for begineers to start learning about functional programming"
 ---
 
 ## Introduction
