@@ -3,11 +3,12 @@ import PropTypes from "prop-types"
 
 export default class HTML extends React.Component {
   render() {
+    const { title, desc } = this.props;
     return (
       <html {...this.props.htmlAttributes}>
         <head>
-            <title> Michael's Blog</title>
-            <meta name="description" content="Michael Gathara's blog about things"/>
+            <title>{title | "Michael's Blog"}</title>
+            <meta name="description" content={description || "Michael Gathara's blog about things"}/>
             <meta property="og:image" content="https://michaelgathara.org/images/raindrop.webp" />
             <link rel="stylesheet" href="https://michaelgathara.com/assets/main.css"/>
             <meta name="keywords"
