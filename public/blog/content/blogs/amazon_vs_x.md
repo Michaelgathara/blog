@@ -2,10 +2,10 @@
 title: "Amazon is best candidate to build a western everything app"
 date: "2023-08-18"
 path: "/amazon_vs_x"
-desc: "Amazon has all the ingredients, will they choose to bake their cake?"
+desc: "Amazon has all the ingredients, will they cook?"
 ---
 
-# Why Amazon
+# Why Amazon?
 #### This is part of a `quick-reads` series, thus less formal and shorter than my other posts
 WeChat integrates various services into one platform, including messaging, payments, shopping, social media, and the ability to download mini-apps. It's a one-stop shop for anything you would ever want to use. This approach has revolutionized the way people interact with technology in East Asia. The West has yet to see the emergence of an actual everything app. Elon Musk has vowed to introduce the first wep, but X has a long way to go; X (formerly Twitter) is currently nothing more than a text and video-based social media platform. On top of this, X struggles with brand partnerships, and keeping advertisers happy, which is crucial if you plan on building a wep.
 

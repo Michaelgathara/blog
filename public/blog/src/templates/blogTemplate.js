@@ -18,8 +18,9 @@ export default function Template({
     <div className="blog-post-container">
       <Helmet>
         <title>{frontmatter.title}</title>
-        <meta name="description" content={frontmatter.desc} />
+        <meta name="description" content={frontmatter.desc}/>
       </Helmet>
+      {/* {this.props.headComponents} */}
       <div className="blog-post">
         <h1 className={styles.blogPostTitle} id={styles.blogPostTitle}>{frontmatter.title}</h1>
         <div className={styles.goingBack}>

@@ -16,6 +16,7 @@ exports.createPages = async ({ graphql, actions }) => {
               date(formatString: "MMMM DD, YYYY")
               path
               title
+              desc
             }
             html
           }
@@ -33,7 +34,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: edge.node.frontmatter.path,
       component: blogPostTemplate,
       context: {
-        slug: edge.node.frontmatter.path, // Use 'slug' or another non-reserved name here
+        slug: edge.node.frontmatter.path, 
       },
     });
   });
