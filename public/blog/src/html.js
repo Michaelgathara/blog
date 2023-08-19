@@ -7,8 +7,8 @@ export default class HTML extends React.Component {
     return (
       <html {...this.props.htmlAttributes}>
         <head>
-            <title>{title | "Michael's Blog"}</title>
-            <meta name="description" content={description || "Michael Gathara's blog about things"}/>
+            <title>{ title || "Michael's Blog" }</title>
+            <meta name="description" content={ desc || "Michael Gathara's blog about things" }/>
             <meta property="og:image" content="https://michaelgathara.org/images/raindrop.webp" />
             <link rel="stylesheet" href="https://michaelgathara.com/assets/main.css"/>
             <meta name="keywords"
@@ -36,6 +36,8 @@ export default class HTML extends React.Component {
 }
 
 HTML.propTypes = {
+  title: PropTypes.string,
+  desc: PropTypes.string,
   htmlAttributes: PropTypes.object,
   headComponents: PropTypes.array,
   bodyAttributes: PropTypes.object,

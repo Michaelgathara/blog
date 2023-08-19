@@ -1,26 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import * as styles from "../components/blog.module.css"
-import Navigation from "../components/Navigation"
-
-const links = [
-  {
-    text: "Main",
-    url: "https://michaelgathara.com/",
-  },
-  {
-    text: "About",
-    url: "https://michaelgathara.com/about",
-  },
-  {
-    text: "Projects",
-    url: "https://michaelgathara.com/projects",
-  },
-  {
-    text: "Blog",
-    url: "https://michaelgathara.org",
-  },
-]
+// import Navigation from "../components/Navigation"
 
 const BlogPage = ({ data }) => (
   <div className={styles.main}>
@@ -47,9 +28,10 @@ export const pageQuery = graphql`
         node {
           id
           frontmatter {
+            date(formatString: "MMMM DD, YYYY")
             path
             title
-            date(formatString: "MMMM DD, YYYY")
+            desc
           }
         }
       }
