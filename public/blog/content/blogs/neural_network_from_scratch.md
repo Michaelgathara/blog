@@ -271,4 +271,3 @@ By running the main function, we can observe how the neural network behaves with
 By breaking down each component, we gain a deeper understanding of how a neural network operates from the inside out. It's not just about making it work; it's about knowing why it works. In the next section, we'll explore how to interpret the output of our network and understand the impact of our initial random parameters.
 
 The entire network and a GPU version are available at: [My Github](https://github.com/Michaelgathara/neural-network-in-c)
-
