@@ -134,3 +134,7 @@ img[alt="copy-symbol"] {
 .blogPostContent img[alt="export-symbol"] {
     text-align: center;
 }
+
+a {
+    color: var(--cream);
+}
