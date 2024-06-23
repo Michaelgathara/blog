@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 const BlogPage = ({ data }) => (
   <div>
-    <h1>My Blog Posts</h1>
+    <h1>Pieces</h1>
     {data.allMarkdownRemark.edges.map(post => (
       <div key={post.node.id}>
         <h2>{post.node.frontmatter.title}</h2>
