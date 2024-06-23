@@ -96,7 +96,7 @@ Once you feel like you have found out as much as you can then you can fully star
 2. Technical
 - Practice Coding Problems: Use platforms like LeetCode, HackerRank, and CodeSignal to practice coding challenges if you have a leetcode style interview. If your interview is projet based, try building out a project of the same style that you anticipate prior to the interview
 - Review Core Concepts: Make sure you are comfortable with data structures, algorithms, and system design principles. Especially System Design, seems to be quite overlooked
-- Start with Leetcode easy, do about ~30 then do Neetcode 75
+- Start with Leetcode easy, do about ~30 easys then do the [Neetcode Blind 75](https://neetcode.io/practice)
 - Mock Interviews: Participate in mock interviews with peers or use services like Pramp or Interviewing.io to simulate the interview environment.
 3. During the Interview
 - Stay Calm and Confident: Take deep breaths, listen carefully to the questions, and take your time to respond. You do not need to have an answer to every question on the spot, it's okay to talk your way to a solution 
