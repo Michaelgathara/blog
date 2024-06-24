@@ -138,3 +138,23 @@ img[alt="copy-symbol"] {
 a {
     color: var(--cream);
 }
+
+::-webkit-scrollbar {
+    visibility: visible;
+    display: block;
+    width: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--cream);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--deepBlue);
+    border: none;
+}
