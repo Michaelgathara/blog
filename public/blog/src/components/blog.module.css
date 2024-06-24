@@ -46,8 +46,10 @@ html {
     /* text-decoration: #7A7D7D dotted underline; */
     text-decoration: none;
     color: var(--title);
-    font-size: 30px;
+    font-size: 1.7em;
     margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .blogTitle:hover {
