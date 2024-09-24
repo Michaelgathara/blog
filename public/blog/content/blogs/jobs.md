@@ -1,7 +1,7 @@
 ---
 title: "Lessons I learned searching for an internship"
 date: "2024-06-15"
-path: "/so_you_want_a_job"
+path: "/lessons_from_applying"
 desc: "The lessons I learned while searching for an internship and how you can apply them in your search"
 ---
 

@@ -7,6 +7,13 @@
       "**/*.py",
       "*.py",
       "**/node_modules/**"
+    ],
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "/so_you_want_a_job",
+        "destination": "/lessons_from_applying"
+      }
     ]
   }
 }
