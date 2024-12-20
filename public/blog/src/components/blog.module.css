@@ -1,162 +1,193 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@350&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@350&display=swap");
 
 /* Applies to every page */
 html {
-    font-family: 'Roboto Slab', sans-serif;
-    background-color: var(--deepBlue);
+  font-family: "Roboto Slab", sans-serif;
+  background-color: var(--deepBlue);
 }
 
 /* For everything on the main page */
 .main {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .name {
-    color: var(--date);
-    width: 100%;
-    font-size: 20px;
-    letter-spacing: .15em;
-    margin-top: 2%;
-    margin-bottom: 1%;
-    margin-left: 15%;
-    /* text-align: center; */
+  color: var(--date);
+  width: 100%;
+  font-size: 20px;
+  letter-spacing: 0.15em;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  margin-left: 15%;
+  /* text-align: center; */
 }
 
 .homeLinkText {
-    color: white;
-    font-size: 13px;
-    margin-lefT: 15%;
+  color: white;
+  font-size: 13px;
+  margin-left: 15%;
 }
 
 .homeLink {
-    color: var(--date);
+  color: var(--date);
 }
 
 .blogs {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
 .blogTitle {
-    /* text-decoration: #7A7D7D dotted underline; */
-    text-decoration: none;
-    color: var(--title);
-    font-size: 1.7em;
-    margin-top: 5%;
-    margin-left: 2%;
-    margin-right: 2%;
+  /* text-decoration: #7A7D7D dotted underline; */
+  text-decoration: none;
+  color: var(--title);
+  font-size: 1.7em;
+  margin-top: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .blogTitle:hover {
-    /* color: #7A7D7D; */
-    /* color: #F19953; Orange */
-    color: var(--cream);
+  /* color: #7A7D7D; */
+  /* color: #F19953; Orange */
+  color: var(--cream);
 }
 
 .blogDate {
-    color: var(--date);
+  color: var(--date);
 }
 
 /* For the actual blogs themselves */
 .blogPostTitle {
-    margin-top: 5%;
-    color: var(--date);
-    text-align: center;
+  margin-top: 5%;
+  color: var(--date);
+  text-align: center;
 }
 
 hr {
-    background-color: #DFF8EB;
-    width: 80%;
-    margin: auto;
+  background-color: #dff8eb;
+  width: 80%;
+  margin: auto;
 }
 
 .leftArrow {
-    font-size: 16px;
+  font-size: 16px;
+}
+
+/* .goBack {
+    color: white;
+    margin-left: 10%;
+    text-decoration: none;    
+    font-size: 14px;
+} */
+
+.goingBack {
+  margin: 2rem 0;
 }
 
 .goBack {
-    color: white;
-    /* text-align: center; */
-    margin-left: 10%;
-    text-decoration: none;    
-    /* background-color: #DFF8EB;
-    border-radius: 12px;
-    padding: .6%; */
-    font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 10%;
+  text-decoration: none;
+  font-size: 1.1rem;
+  /* color: #555; */
+  color: var(--cream);
+  transition: color 0.2s ease;
+  padding: 0.5rem 0;
+}
+
+.goBack:hover {
+  color: #000;
+}
+
+.leftArrow {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.goingBack hr {
+  margin-top: 1rem;
+  border: none;
+  height: 1px;
+  background-color: #eee;
 }
 
 .goNext {
-    color: var(--white);
-    text-decoration: none;
-    /* margin-right: 10%; */
-    text-align: center;
-    text-align: right;
-    font-size: 14px;
+  color: var(--white);
+  text-decoration: none;
+  /* margin-right: 10%; */
+  text-align: center;
+  text-align: right;
+  font-size: 14px;
 }
 
 .blogPostDate {
-    text-align: center;
-    color: var(--title);
+  text-align: center;
+  color: var(--title);
 }
 
 .blogPostContent {
-    margin-left: 10%;
-    color: var(--text);
-    margin-right: 10%;
+  margin-left: 10%;
+  color: var(--text);
+  margin-right: 10%;
 }
 
-.blogPostContent h2, h3, h4 {
-    color: var(--cream);
+.blogPostContent h2,
+h3,
+h4 {
+  color: var(--cream);
 }
 
 .blogPostContent li::marker {
-    color: var(--red);
+  color: var(--red);
 }
 
 .blogPostContent strong {
-    color: var(--red);
+  color: var(--red);
 }
 
-:not(pre) > code[class*="language-"], pre[class*="language-"] {
-    background-color: black;
-    border-radius: 10px;
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background-color: black;
+  border-radius: 10px;
 }
 
 img[alt="copy-symbol"] {
-    width: 15px;
-    height: 15px;
-    margin-left: 5px;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
 }
 
 .blogPostContent img[alt="export-symbol"] {
-    text-align: center;
+  text-align: center;
 }
 
 a {
-    color: var(--cream);
+  color: var(--cream);
 }
 
 ::-webkit-scrollbar {
-    visibility: visible;
-    display: block;
-    width: 0.5em;
+  visibility: visible;
+  display: block;
+  width: 0.5em;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--cream);
-    border-radius: 10px;
+  background-color: var(--cream);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-button {
-    display: none;
+  display: none;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--deepBlue);
-    border: none;
+  background-color: var(--deepBlue);
+  border: none;
 }
