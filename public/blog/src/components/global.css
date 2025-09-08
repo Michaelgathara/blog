@@ -1,21 +1,88 @@
-html {
-    background-color: black;
+/* Theme System - Light and Dark Mode */
+:root {
+    /* Light theme (default) */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --text-muted: #718096;
+    --accent-primary: #3182ce;
+    --accent-hover: #2c5282;
+    --border-color: #e2e8f0;
+    --code-bg: #f7fafc;
+    --code-border: #e2e8f0;
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
-:root {
-    /* --peach: #feaea3; */
-    --nameRed: #f30a49;
-    --blueGray: #d5bdaf;
-    --sectionColor: red;
-    /* Another color pal */
-    --deepBlue: #1d3557;
-    --bgBlue: #457b9d;
-    --anotherBlue: #355070;
-    --lightBlue: #a8dadc;
-    --white: #f1faee;
-    --red: #e63946;
-    --cream: #e0afa0;
-    --title: #DBDBDB;
-    --date: #feaea3;
-    --text: #e9ecef;
+[data-theme="dark"] {
+    /* Dark theme */
+    --bg-primary: #1a202c;
+    --bg-secondary: #2d3748;
+    --text-primary: #f7fafc;
+    --text-secondary: #e2e8f0;
+    --text-muted: #a0aec0;
+    --accent-primary: #63b3ed;
+    --accent-hover: #90cdf4;
+    --border-color: #4a5568;
+    --code-bg: #2d3748;
+    --code-border: #4a5568;
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+html {
+    background-color: var(--bg-primary);
+    transition: background-color 0.2s ease;
+}
+
+/* Override Prism.js theme colors for our theme system */
+[data-theme="light"] .token.comment,
+[data-theme="light"] .token.prolog,
+[data-theme="light"] .token.doctype,
+[data-theme="light"] .token.cdata {
+  color: #6a737d !important;
+}
+
+[data-theme="light"] .token.punctuation {
+  color: #24292e !important;
+}
+
+[data-theme="light"] .token.property,
+[data-theme="light"] .token.tag,
+[data-theme="light"] .token.constant,
+[data-theme="light"] .token.symbol,
+[data-theme="light"] .token.deleted {
+  color: #d73a49 !important;
+}
+
+[data-theme="light"] .token.boolean,
+[data-theme="light"] .token.number {
+  color: #005cc5 !important;
+}
+
+[data-theme="light"] .token.selector,
+[data-theme="light"] .token.attr-name,
+[data-theme="light"] .token.string,
+[data-theme="light"] .token.char,
+[data-theme="light"] .token.builtin,
+[data-theme="light"] .token.inserted {
+  color: #032f62 !important;
+}
+
+[data-theme="light"] .token.operator,
+[data-theme="light"] .token.entity,
+[data-theme="light"] .token.url,
+[data-theme="light"] .language-css .token.string,
+[data-theme="light"] .style .token.string {
+  color: #24292e !important;
+}
+
+[data-theme="light"] .token.atrule,
+[data-theme="light"] .token.attr-value,
+[data-theme="light"] .token.keyword {
+  color: #d73a49 !important;
+}
+
+[data-theme="light"] .token.function,
+[data-theme="light"] .token.class-name {
+  color: #6f42c1 !important;
 }
