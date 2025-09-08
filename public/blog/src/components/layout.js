@@ -7,6 +7,7 @@
 
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Header from "./Navigation"
 import "./layout.css"
@@ -17,6 +18,11 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+        }
+      }
+      redbullIcon: file(relativePath: { eq: "redbull.png" }) {
+        childImageSharp {
+          gatsbyImageData(width: 20, height: 20, placeholder: BLURRED)
         }
       }
     }
@@ -39,9 +45,16 @@ const Layout = ({ children }) => {
             fontSize: `var(--font-sm)`,
           }}
         >
-          © {new Date().getFullYear()} &middot; Built with 
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          © {new Date().getFullYear()} &middot; Built by Michael Gathara with{` `}
+          <GatsbyImage 
+            image={getImage(data.redbullIcon)} 
+            alt="Red Bull" 
+            style={{ 
+              display: "inline-block", 
+              verticalAlign: "middle", 
+              marginLeft: "4px" 
+            }}
+          />
         </footer>
       </div>
     </>
