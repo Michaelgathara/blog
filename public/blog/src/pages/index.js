@@ -2,12 +2,10 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import * as styles from "../components/blog.module.css"
 import ThemeToggle from "../components/ThemeToggle"
-// import Navigation from "../components/Navigation"
 
 const BlogPage = ({ data }) => (
   <div className={styles.main}>
     <ThemeToggle />
-    {/* <Navigation /> */}
     <h1 className={styles.name}>A Blog About Things</h1>
     <p className={styles.homeLinkText}><Link to="https://michaelgathara.com" className={styles.homeLink}>Michael Gathara's</Link> blog</p>
     <div className={styles.blogs}>

@@ -1,5 +1,3 @@
-// src/templates/blogTemplate.js
-
 import React from "react"
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"

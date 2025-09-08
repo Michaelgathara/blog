@@ -5,7 +5,6 @@ const ThemeToggle = () => {
   const [theme, setTheme] = useState("light")
 
   useEffect(() => {
-    // Check for saved theme preference or default to light
     const savedTheme = localStorage.getItem("theme") || "light"
     setTheme(savedTheme)
     document.documentElement.setAttribute("data-theme", savedTheme)

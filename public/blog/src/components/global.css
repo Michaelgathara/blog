@@ -1,6 +1,4 @@
-/* Theme System - Light and Dark Mode */
 :root {
-    /* Light theme (default) */
     --bg-primary: #ffffff;
     --bg-secondary: #f8f9fa;
     --text-primary: #2d3748;
@@ -15,7 +13,6 @@
 }
 
 [data-theme="dark"] {
-    /* Dark theme */
     --bg-primary: #1a202c;
     --bg-secondary: #2d3748;
     --text-primary: #f7fafc;
@@ -34,7 +31,6 @@ html {
     transition: background-color 0.2s ease;
 }
 
-/* Override Prism.js theme colors for our theme system */
 [data-theme="light"] .token.comment,
 [data-theme="light"] .token.prolog,
 [data-theme="light"] .token.doctype,

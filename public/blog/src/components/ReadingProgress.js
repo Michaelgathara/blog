@@ -13,7 +13,7 @@ const ReadingProgress = () => {
     }
 
     window.addEventListener("scroll", updateProgress)
-    updateProgress() // Initial calculation
+    updateProgress()
 
     return () => window.removeEventListener("scroll", updateProgress)
   }, [])
