@@ -338,7 +338,7 @@ img[alt="copy-symbol"] {
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .main {
+  .main, body {
     padding: 1rem;
   }
   
