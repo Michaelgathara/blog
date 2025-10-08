@@ -8,7 +8,7 @@ export default class HTML extends React.Component {
         <head>
             <title>Michael's Blog</title>
             {/* <meta name="description" content="Michael Gathara's blog about things"/> */}
-            <meta property="og:image" content="https://michaelgathara.org/images/raindrop.webp" />
+            {/* og:image is set per-page via Helmet */}
             <link rel="stylesheet" href="https://michaelgathara.com/assets/main.css"/>
             <meta name="keywords"
             content="michael,michael gathara, gathara, michaelgathara, michael.gathara, michael github, michael gathara github, hoover high school, hoover city schools, michael hoover high school, al.com, al michael gathara, michael gathara al, projects, programmer, africa michael gathara, michael gathara uab, uab, mike uab, mikegtr, mikegtrm, top software blogger, best software blogs, best swe bloggers, top linkedin voices" />
@@ -16,7 +16,7 @@ export default class HTML extends React.Component {
             <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
             <meta name="theme-color" content="#000" />
             <meta name="author" content="Michael Gathara" />
-            <meta property="og:image" content="https://michaelgathara.com/images/minimal.png"/>
+            {/* og:image is set per-page via Helmet */}
             <link rel="icon" href="https://michaelgathara.com/images/favicon.ico"/>
             
           {/* existing head component */}

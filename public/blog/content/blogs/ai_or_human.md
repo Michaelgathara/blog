@@ -3,6 +3,7 @@ title: "How Platforms Know if An Image/Video is AI-Made"
 date: "2025-10-06"
 path: "/by_ai_or_human"
 desc: "How platforms know if an image or video is made by AI, Cryptographic Provenance"
+image: "/assets/images/ai-vs-human-cover.png"
 ---
 
 # Introduction
