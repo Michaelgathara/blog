@@ -1,7 +1,32 @@
-import React, { useEffect } from "react"
-import * as styles from "./blog.module.css"
+import { useEffect } from "react"
 
 const CodeBlock = () => {
+  useEffect(() => {
+    const syncDeckgoTheme = () => {
+      const root = document.documentElement
+      const mode = root.getAttribute("data-theme") || "light"
+      const deckgoTheme = mode === "dark" ? "one-dark" : "one-light"
+      const nodes = document.querySelectorAll("deckgo-highlight-code")
+      nodes.forEach(node => {
+        try {
+          node.setAttribute("theme", deckgoTheme)
+        } catch {}
+      })
+    }
+
+    syncDeckgoTheme()
+    const observer = new MutationObserver(mutations => {
+      for (const m of mutations) {
+        if (m.type === "attributes" && m.attributeName === "data-theme") {
+          syncDeckgoTheme()
+        }
+      }
+    })
+    observer.observe(document.documentElement, { attributes: true })
+
+    return () => observer.disconnect()
+  }, [])
+
   useEffect(() => {
     const addCopyButtons = () => {
       const codeBlocks = document.querySelectorAll("pre[class*='language-']")

@@ -7,4 +7,8 @@
 // You can delete this file if you're not using it
 // in gatsby-browser.js
 import "./src/components/global.css"
-require("prismjs/themes/prism-tomorrow.css")
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
+
+export const onClientEntry = () => {
+  deckDeckGoHighlightElement(window)
+}

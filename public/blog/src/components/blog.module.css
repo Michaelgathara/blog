@@ -221,8 +221,28 @@ hr {
 pre[class*="language-"] {
   background-color: var(--code-bg) !important;
   border: 1px solid var(--code-border) !important;
+  color: var(--text-primary) !important;
   border-radius: 8px !important;
   font-family: "JetBrains Mono", "Fira Code", Consolas, monospace !important;
+}
+
+.blogPostContent deckgo-highlight-code {
+  display: block;
+  margin: 2rem 0;
+  color: var(--text-primary);
+  --deckgo-highlight-code-carbon-background: var(--code-bg);
+  --deckgo-highlight-code-carbon-border: 1px solid var(--code-border);
+  --deckgo-highlight-code-carbon-border-radius: 8px;
+  --deckgo-highlight-code-carbon-color: var(--text-primary);
+  --deckgo-highlight-code-carbon-box-shadow: none;
+  --deckgo-highlight-code-carbon-margin: 0;
+  --deckgo-highlight-code-carbon-header-padding: 0;
+  --deckgo-highlight-code-carbon-header-margin: 0;
+  --deckgo-highlight-code-carbon-toolbar-display: none;
+  --deckgo-highlight-code-margin: 0;
+  --deckgo-highlight-code-padding: 1.5rem;
+  --deckgo-highlight-code-border-radius: 8px;
+  --deckgo-highlight-code-font-family: "JetBrains Mono", "Fira Code", Consolas, monospace;
 }
 
 .blogPostContent pre {
