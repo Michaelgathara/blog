@@ -25,11 +25,11 @@ export default function Template({ data }) {
   const readingTime = calculateReadingTime(extractTextFromHtml(html))
   const siteUrl = data.site.siteMetadata.siteUrl
   const ogImage = frontmatter.image
-    ? (frontmatter.image.startsWith("http")
-        ? frontmatter.image
-        : `${siteUrl}${frontmatter.image}`)
+    ? frontmatter.image.startsWith("http")
+      ? frontmatter.image
+      : `${siteUrl}${frontmatter.image}`
     : null
-  
+
   return (
     <div className="blog-post-container">
       <Helmet>
@@ -42,7 +42,10 @@ export default function Template({ data }) {
         {ogImage ? <meta property="og:image" content={ogImage} /> : null}
         <meta name="twitter:title" content={frontmatter.title} />
         <meta name="twitter:description" content={frontmatter.desc} />
-        <meta name="twitter:card" content={ogImage ? "summary_large_image" : "summary"} />
+        <meta
+          name="twitter:card"
+          content={ogImage ? "summary_large_image" : "summary"}
+        />
         {ogImage ? <meta name="twitter:image" content={ogImage} /> : null}
       </Helmet>
       <ThemeToggle />

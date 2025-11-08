@@ -45,14 +45,15 @@ const Layout = ({ children }) => {
             fontSize: `var(--font-sm)`,
           }}
         >
-          © {new Date().getFullYear()} &middot; Built by Michael Gathara with{` `}
-          <GatsbyImage 
-            image={getImage(data.redbullIcon)} 
-            alt="Red Bull" 
-            style={{ 
-              display: "inline-block", 
-              verticalAlign: "middle", 
-              marginLeft: "4px" 
+          © {new Date().getFullYear()} &middot; Built by Michael Gathara with
+          {` `}
+          <GatsbyImage
+            image={getImage(data.redbullIcon)}
+            alt="Red Bull"
+            style={{
+              display: "inline-block",
+              verticalAlign: "middle",
+              marginLeft: "4px",
             }}
           />
         </footer>
