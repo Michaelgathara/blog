@@ -7,7 +7,8 @@ const ReadingProgress = () => {
   useEffect(() => {
     const updateProgress = () => {
       const scrollTop = window.scrollY
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight
       const scrollPercent = (scrollTop / docHeight) * 100
       setProgress(Math.min(scrollPercent, 100))
     }
@@ -20,7 +21,7 @@ const ReadingProgress = () => {
 
   return (
     <div className={styles.readingProgress}>
-      <div 
+      <div
         className={styles.readingProgressBar}
         style={{ width: `${progress}%` }}
       />

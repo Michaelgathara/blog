@@ -7,11 +7,18 @@ const BlogPage = ({ data }) => (
   <div className={styles.main}>
     <ThemeToggle />
     <h1 className={styles.name}>A Blog About Things</h1>
-    <p className={styles.homeLinkText}><Link to="https://michaelgathara.com" className={styles.homeLink}>Michael Gathara's</Link> blog</p>
+    <p className={styles.homeLinkText}>
+      <Link to="https://michaelgathara.com" className={styles.homeLink}>
+        Michael Gathara's
+      </Link>{" "}
+      blog
+    </p>
     <div className={styles.blogs}>
       {data.allMarkdownRemark.edges.map(post => (
         <div key={post.node.id}>
-          <Link to={post.node.frontmatter.path} className={styles.blogTitle}>{post.node.frontmatter.title}</Link>
+          <Link to={post.node.frontmatter.path} className={styles.blogTitle}>
+            {post.node.frontmatter.title}
+          </Link>
           <p className={styles.blogDate}>{post.node.frontmatter.date}</p>
         </div>
       ))}

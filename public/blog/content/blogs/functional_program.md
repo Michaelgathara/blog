@@ -12,6 +12,7 @@ In the ever-evolving world of programming, different paradigms have emerged, eac
 In this article, we'll dive into the world of functional programming, specifically in the context of Python. While Python is often associated with the Object-Oriented Programming (OOP) paradigm, it also offers powerful support for the functional programming paradigm. We'll discover how to embrace functional programming in Python, discussing its strengths, reviewing key concepts, and understanding how Python enables us to write functional code.
 
 ## What is Functional Programming?
+
 Functional Programming (FP) is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data. This definition might sound complex, but we can break it down into simpler terms.
 
 In FP, functions are first-class entities. This means that, like any other entity, a function can be passed as an argument, returned from a function, and assigned to variables. The core philosophy of functional programming is to abstract control flows and operations on data with functions, leading to code that is easy to understand, test, and debug.
@@ -40,11 +41,11 @@ Remember, the goal is not to completely switch from your current paradigm to fun
 
 ## Functional Programming and Python
 
-While Python is a multi-paradigm language that primarily supports procedural and object-oriented programming, it also incorporates functional programming features. These features allow developers to utilize the power and expressiveness of functional programming when it suits their needs. 
+While Python is a multi-paradigm language that primarily supports procedural and object-oriented programming, it also incorporates functional programming features. These features allow developers to utilize the power and expressiveness of functional programming when it suits their needs.
 
 #### Immutability in Python
 
-In Python, some data types are mutable, such as lists and dictionaries, while others like tuples and strings are immutable. When we say that an object is immutable, it means that its state cannot be modified after it's created. 
+In Python, some data types are mutable, such as lists and dictionaries, while others like tuples and strings are immutable. When we say that an object is immutable, it means that its state cannot be modified after it's created.
 
 Let's consider an example:
 
@@ -61,6 +62,7 @@ l[0] = 4
 ```
 
 As you can see, once a tuple is created, we cannot change its contents. However, we can do that for a list. Immutable objects are very useful in functional programming since they help us write safer code.
+
 #### Functional Programming Tools in Python
 
 Python provides several built-in tools that allow us to write code in a functional style. Some of these include:
@@ -77,6 +79,7 @@ square_lambda = lambda x: x ** 2
 # Both functions work the same
 assert square(5) == square_lambda(5)
 ```
+
 <br><br>
 map(): The map() function takes in a function and a list (or any iterable) and applies the function to each element of the list.
 
@@ -85,6 +88,7 @@ numbers = [1, 2, 3, 4, 5]
 squared = map(lambda x: x ** 2, numbers)
 print(list(squared))  # Output: [1, 4, 9, 16, 25]
 ```
+
 <br><br>
 filter(): The filter() function also takes in a function and a list. The function should return a Boolean value, and filter() will return a new list containing only the elements for which the function returns True.
 
@@ -94,6 +98,7 @@ numbers = [1, 2, 3, 4, 5]
 even = filter(lambda x: x % 2 == 0, numbers)
 print(list(even))  # Output: [2, 4]
 ```
+
 <br><br>
 reduce(): The reduce() function, which is found in the functools module, continuously applies a function to the elements of a list until only a single result is left.
 
@@ -105,6 +110,7 @@ numbers = [1, 2, 3, 4, 5]
 product = reduce(lambda x, y: x * y, numbers)
 print(product)  # Output: 120
 ```
+
 <br><br>
 List Comprehension: This is a compact way of creating lists in Python. It's often used in place of map() and filter() for its readability.
 
@@ -154,10 +160,12 @@ def factorial(n):
 print(factorial(5))  # Output: 120
 print(factorial(6))  # Output: 720
 ```
+
 The factorial function calls itself to solve the problem, making it a recursive function.
 Higher-Order Functions
 
 In functional programming, a higher-order function is a function that does at least one of the following:
+
 1. Takes one or more functions as arguments.
 2. Returns a function as its result.
 
@@ -190,6 +198,7 @@ def multiply_by_two(x):
 def add_three(x):
     return x + 3
 ```
+
 We can "compose" these functions together like this:
 
 ```python
@@ -199,6 +208,7 @@ def compose_multiply_then_add(x):
 
 print(compose_multiply_then_add(5))  # Output: 13
 ```
+
 The compose_multiply_then_add function effectively combines or "composes" the two defined functions. First, it multiplies the input by two and then adds three to the result.
 
 ### Currying
@@ -215,6 +225,7 @@ def add(x):
 add_five = add(5)
 print(add_five(3))  # Output: 8
 ```
+
 In this example, the add function takes a single argument x and returns a new function add_inner that also takes a single argument. This is a demonstration of currying.
 Partial Function Application
 
@@ -231,6 +242,7 @@ double = partial(multiply, 2)
 
 print(double(4))  # Output: 8
 ```
+
 In the above example, the double function is a partial application of the multiply function where the first argument is fixed to 2.
 
 These advanced functional programming concepts allow for even more flexible and powerful programming styles in Python, adding to the versatility of the language.
@@ -317,14 +329,14 @@ import operator
 
 def sum_length(strings):
     return reduce(
-        operator.add, 
-        map(len, 
-            filter(lambda s: 
-                   any(c.isupper() for c in s) 
-                   and 
-                   any(c.isdigit() for c in s), 
+        operator.add,
+        map(len,
+            filter(lambda s:
+                   any(c.isupper() for c in s)
+                   and
+                   any(c.isdigit() for c in s),
                 strings)
-            ), 
+            ),
         0
     )
 

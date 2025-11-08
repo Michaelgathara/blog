@@ -28,9 +28,15 @@ function Seo({ description, title, image, url, children }) {
   const defaultTitle = site.siteMetadata?.title
   const siteUrl = site.siteMetadata?.siteUrl || ""
   const absoluteImage = image
-    ? (image.startsWith("http") ? image : `${siteUrl}${image}`)
+    ? image.startsWith("http")
+      ? image
+      : `${siteUrl}${image}`
     : undefined
-  const absoluteUrl = url ? (url.startsWith("http") ? url : `${siteUrl}${url}`) : undefined
+  const absoluteUrl = url
+    ? url.startsWith("http")
+      ? url
+      : `${siteUrl}${url}`
+    : undefined
 
   return (
     <>
@@ -40,12 +46,16 @@ function Seo({ description, title, image, url, children }) {
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
       {absoluteUrl ? <meta property="og:url" content={absoluteUrl} /> : null}
-      {absoluteImage ? <meta property="og:image" content={absoluteImage} /> : null}
+      {absoluteImage ? (
+        <meta property="og:image" content={absoluteImage} />
+      ) : null}
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      {absoluteImage ? <meta name="twitter:image" content={absoluteImage} /> : null}
+      {absoluteImage ? (
+        <meta name="twitter:image" content={absoluteImage} />
+      ) : null}
       {children}
     </>
   )
