@@ -62,7 +62,9 @@ This is the **Generalize** step. Rather than patching one failing test, the goal
 
 Working inside PyTorch did not feel glamorous most of the time. It felt like reading unfamiliar subsystems until my brain couldn't take it anymnore, running the same failing test again and again as per usual with tests, and slowly building a mental map of where things lived. What helped most was treating every review comment and CI failure as a clue, not a verdict. One important lesson is that the maintainers were not asking for perfection. They were asking for clarity, good tests, and changes that fit the design of the project.
 
-Another essential point to keep in mind is the importance of communication. After submitting your pull request, making the effort to communicate your intentions and decisions clearly can make a big difference in how the review process goes. For example, my very first pull request attracted more than forty comments from PyTorch maintainers. At first, it felt overwhelming, but actively engaging with their feedback asking clarifying questions, explaining my thought process, and being open to suggestions really helped move the discussion forward. Good communication also means being willing to revise your changes, to explain the reasoning behind what you have done, and to acknowledge misunderstandings or mistakes as they come up. Building this kind of open dialogue not only improves your code but also builds trust with reviewers and maintainers, making collaboration much more productive and enjoyable. I learned a lot from the comments left on my first PR and subsequent PRs received significantly less comments. 
+Another essential point to keep in mind is the importance of communication. After submitting your pull request, making the effort to communicate your intentions and decisions clearly can make a big difference in how the review process goes. For example, my very first pull request attracted more than forty comments from PyTorch maintainers. At first, it felt overwhelming, but actively engaging with their feedback asking clarifying questions, explaining my thought process, and being open to suggestions really helped move the discussion forward. 
+
+Good communication also means being willing to revise your changes, to explain the reasoning behind what you have done, and to acknowledge misunderstandings or mistakes as they come up. Building this kind of open dialogue not only improves your code but also builds trust with reviewers and maintainers, making collaboration much more productive and enjoyable. I learned a lot from the comments left on my first PR and subsequent PRs received significantly less comments. 
 
 Looking back, a few themes stand out:
 
@@ -70,7 +72,7 @@ Looking back, a few themes stand out:
 - **Tests are your compass**: if you can write a failing test that captures the bug, you always know when you are making progress.
 - **Review is collaboration, not judgment**: every suggestion from a maintainer made the change more robust and more in line with the rest of PyTorch.
 
-## How you can do it too if you're just starting out
+## How you can do it too
 
 If you want to contribute to a large project like PyTorch, you do not need to wait until you feel like an expert. You can start from the same place I did, with a real bug that affects you and a desire to make it go away in a principled way.
 
