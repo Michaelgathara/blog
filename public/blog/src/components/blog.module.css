@@ -213,8 +213,6 @@ hr {
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   font-family: "JetBrains Mono", "Fira Code", Consolas, monospace;
-  font-size: 0.9em;
-  border: 1px solid var(--code-border);
 }
 
 :not(pre) > code[class*="language-"],
