@@ -84,6 +84,9 @@ If you want to contribute to a large project like PyTorch, you do not need to wa
 
 The core idea is simple. Stabilize what you can see. Isolate the behavior you want to change. Generalize the fix so that it helps more than one user. This loop scales from tiny bug fixes to significant features, and it is a good way to navigate any codebase that feels larger than you are.
 
+## Conclusion
+Stepping back, this story started with my own code breaking and with me not quite believing that I was ready to contribute to a codebase like PyTorch. Following those threads through PyTorch, guided by the errors I was hitting in my own work, taught me that you can make meaningful changes even when the system feels too big to hold in your head. It may not work for everyone, but if you apply the same loop of stabilizing what you depend on, isolating the behavior you care about, and generalizing each fix so that it helps more than your own code, you can slowly build both your understanding and your impact. This is the path from a confusing error message to a pull request that quietly improves life for other people.
+
 ### Contributions
 
 (Listed in order of completion)
