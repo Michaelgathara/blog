@@ -92,7 +92,5 @@ Stepping back, this story started with my own code breaking and with me not quit
 (Listed in order of completion)
 - [PR #157810: feat(dynamo): raise UnsupportedError for ndarray.astype(object)](https://github.com/pytorch/pytorch/pull/157810)
 - [PR #158036: #IS157973/numpy version issue](https://github.com/pytorch/pytorch/pull/158036)
+    - **Impact (Highlighted by Matthew's PR)**: [PR #2592 fix: Add temporary upper bounds on NumPy and SciPy to pass tests](https://github.com/scikit-hep/pyhf/commit/500e8e4e27c9695663929f83223d8835d31884f4)
 - [PR #160837: feat(dynamo): make F.one_hot work with jacfwd + torch.compile(dynamic=True)](https://github.com/pytorch/pytorch/pull/160837)
-
-Impact (pyhf PR by Matthew)
-- [PR #2592 fix: Add temporary upper bounds on NumPy and SciPy to pass tests](https://github.com/scikit-hep/pyhf/commit/500e8e4e27c9695663929f83223d8835d31884f4)
