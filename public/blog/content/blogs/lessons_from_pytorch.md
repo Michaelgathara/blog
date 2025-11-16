@@ -6,7 +6,7 @@ desc: "Some lessons i've learned while contributing to PyTorch"
 image: "/images/lessons-pytorch-cover.jpg"
 ---
 
-PyTorch is the biggest codebase I have ever had to deal with, and the first time I opened it I wasn’t trying to “contribute to core” at all, I was just trying to make a failing test go green. A NumPy upgrade had broken code I relied on, error messages from torch.compile were long, and a downstream library (pyhf) had started pinning dependencies just to keep CI running. Chasing those problems pulled me into parts of PyTorch I’d never expected to touch, and along the way I ended up shipping three upstream fixes and affecting a small change in pyhf itself. This post is a reflection on that journey: what I learned about working inside a huge codebase, the pattern I now use to structure my contributions, and how you can apply the same ideas to your own first OSS PRs. 
+PyTorch is the biggest codebase I have ever had to deal with, and the first time I opened it I wasn’t trying to contribute at all, I was just trying to figure out why my PyTorch code was not working. A NumPy upgrade had broken code I relied on, error messages from torch.compile were long, and a downstream library (pyhf) had started pinning dependencies just to keep CI running. Chasing those problems pulled me into parts of PyTorch I’d never expected to touch, and along the way I ended up shipping three upstream fixes and affecting a small change in pyhf itself. This post is a reflection on that journey: what I learned about working inside a huge codebase, the pattern I now use to structure my contributions, and how you can apply the same ideas to your own first OSS PRs. 
 
 ## A mental model for working in a huge codebase
 
