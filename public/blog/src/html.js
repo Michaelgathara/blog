@@ -30,6 +30,21 @@ export default class HTML extends React.Component {
             href="https://michaelgathara.com/images/favicon.ico"
           />
 
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-0RBF5MZ61K"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-0RBF5MZ61K');
+              `,
+            }}
+          />
+
           {/* existing head component */}
           {this.props.headComponents}
         </head>
