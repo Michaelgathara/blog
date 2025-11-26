@@ -1,17 +1,18 @@
-// src/templates/blogTemplate.js
-
 import React from "react"
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 import * as styles from "../components/blog.module.css"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
+import ThemeToggle from "../components/ThemeToggle"
+import ReadingProgress from "../components/ReadingProgress"
+import CodeBlock from "../components/CodeBlock"
+import { calculateReadingTime, extractTextFromHtml } from "../utils/readingTime"
 
 const PostNavigation = () => (
   <div className={styles.goingBack}>
     <Link to="/" className={styles.goBack}>
-      <span className={styles.leftArrow}>←</span> More Posts
+      <span className={styles.leftArrow}>←</span> Back to All Posts
     </Link>
-    <br />
     <hr />
   </div>
 )
@@ -21,26 +22,48 @@ deckDeckGoHighlightElement()
 export default function Template({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+  const readingTime = calculateReadingTime(extractTextFromHtml(html))
+  const siteUrl = data.site.siteMetadata.siteUrl
+  const ogImage = frontmatter.image
+    ? frontmatter.image.startsWith("http")
+      ? frontmatter.image
+      : `${siteUrl}${frontmatter.image}`
+    : null
+
   return (
     <div className="blog-post-container">
       <Helmet>
         <title>{frontmatter.title}</title>
         <meta name="description" content={frontmatter.desc} />
+        <meta property="og:title" content={frontmatter.title} />
+        <meta property="og:description" content={frontmatter.desc} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`${siteUrl}${frontmatter.path}`} />
+        {ogImage ? <meta property="og:image" content={ogImage} /> : null}
+        <meta name="twitter:title" content={frontmatter.title} />
+        <meta name="twitter:description" content={frontmatter.desc} />
+        <meta
+          name="twitter:card"
+          content={ogImage ? "summary_large_image" : "summary"}
+        />
+        {ogImage ? <meta name="twitter:image" content={ogImage} /> : null}
       </Helmet>
-      {/* {this.props.headComponents} */}
+      <ThemeToggle />
+      <ReadingProgress />
+      <CodeBlock />
       <div className="blog-post">
         <h1 className={styles.blogPostTitle} id={styles.blogPostTitle}>
           {frontmatter.title}
         </h1>
+        <div className={styles.blogPostDate}>
+          {frontmatter.date} • {readingTime}
+        </div>
         <PostNavigation />
-        <h2 className={styles.blogPostDate}>{frontmatter.date}</h2>
         <div
           className={styles.blogPostContent}
           dangerouslySetInnerHTML={{ __html: html }}
         />
         <PostNavigation />
-        <br></br>
-        <br></br>
       </div>
     </div>
   )
@@ -48,6 +71,11 @@ export default function Template({ data }) {
 
 export const pageQuery = graphql`
   query ($slug: String!) {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     markdownRemark(frontmatter: { path: { eq: $slug } }) {
       html
       frontmatter {
@@ -55,6 +83,7 @@ export const pageQuery = graphql`
         path
         title
         desc
+        image
       }
     }
   }

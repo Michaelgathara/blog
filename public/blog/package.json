@@ -6,8 +6,8 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@deckdeckgo/highlight-code": "^3.6.0",
-    "axios": "^0.28.0",
-    "gatsby": "^5.14.0",
+    "axios": "^1.8.2",
+    "gatsby": "^5.15.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.11.0",
     "gatsby-plugin-react-helmet": "^6.11.0",
@@ -17,13 +17,15 @@
     "gatsby-source-filesystem": "^5.11.0",
     "gatsby-transformer-remark": "^6.11.0",
     "gatsby-transformer-sharp": "^5.11.0",
-    "prismjs": "^1.29.0",
+    "prismjs": "^1.30.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-markdown": "^8.0.7"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
     "prettier": "^2.8.8",
     "webpack-dev-middleware": "^7.2.1"
   },
@@ -38,7 +40,14 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,md,css}": [
+      "prettier --write"
+    ]
   },
   "repository": {
     "type": "git",
