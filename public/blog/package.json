@@ -6,28 +6,28 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@deckdeckgo/highlight-code": "^3.6.0",
-    "axios": "^1.8.2",
-    "gatsby": "^5.15.0",
-    "gatsby-plugin-image": "^3.11.0",
-    "gatsby-plugin-manifest": "^5.11.0",
-    "gatsby-plugin-react-helmet": "^6.11.0",
-    "gatsby-plugin-sharp": "^5.11.0",
+    "axios": "^1.13.3",
+    "gatsby": "^5.16.0",
+    "gatsby-plugin-image": "^3.16.0",
+    "gatsby-plugin-manifest": "^5.16.0",
+    "gatsby-plugin-react-helmet": "^6.16.0",
+    "gatsby-plugin-sharp": "^5.16.0",
     "gatsby-remark-highlight-code": "^3.3.0",
-    "gatsby-remark-prismjs": "^7.11.0",
-    "gatsby-source-filesystem": "^5.11.0",
-    "gatsby-transformer-remark": "^6.11.0",
-    "gatsby-transformer-sharp": "^5.11.0",
+    "gatsby-remark-prismjs": "^7.16.0",
+    "gatsby-source-filesystem": "^5.16.0",
+    "gatsby-transformer-remark": "^6.16.0",
+    "gatsby-transformer-sharp": "^5.16.0",
     "prismjs": "^1.30.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
-    "react-markdown": "^8.0.7"
+    "react-markdown": "^10.1.0"
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.6",
-    "prettier": "^2.8.8",
-    "webpack-dev-middleware": "^7.2.1"
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.8.1",
+    "webpack-dev-middleware": "^7.4.5"
   },
   "keywords": [
     "gatsby"
