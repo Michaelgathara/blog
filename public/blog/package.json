@@ -6,7 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@deckdeckgo/highlight-code": "^3.6.0",
-    "axios": "^1.13.3",
+    "axios": "^1.13.5",
     "gatsby": "^5.16.0",
     "gatsby-plugin-image": "^3.16.0",
     "gatsby-plugin-manifest": "^5.16.0",
